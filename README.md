@@ -1,6 +1,6 @@
 # Cor3-Minecraft-Paper-Plugin
 
-![alt text](https://i.ibb.co/P1Q6HHc/cron3x.png)
+![alt text](https://i.ibb.co/yV1dyLK/cron3x-github-banner.png)
 
 
 
