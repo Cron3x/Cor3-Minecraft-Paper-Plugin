@@ -4,4 +4,4 @@
 
 
 Libraries: 
-  - the GUI Lib is from CottonMC (https://github.com/CottonMC/LibGui) 
+  - the GUI Lib is from CottonMC (https://github.com/CottonMC/LibGui)
