@@ -5,6 +5,7 @@ import de.cron3x.cor3.commands.LeaveCommand;
 import de.cron3x.cor3.commands.StatusCommand;
 import de.cron3x.cor3.commands.subcommands.cor3tools.rlcCommand;
 import de.cron3x.cor3.events.*;
+import de.cron3x.cor3.kotlin.TestKotlinClass;
 import de.cron3x.cor3.recipes.RingRecipe;
 import de.cron3x.cor3.recipes.TeleportBlockRecipe;
 import de.cron3x.cor3.recipes.creative_fly.CreativeFlyWingRecipe;
@@ -32,6 +33,7 @@ public final class Cor3 extends JavaPlugin {
         regEvents();
         regCommands();
         regRecipes();
+        new TestKotlinClass();
     }
 
     @Override
