@@ -3,5 +3,5 @@
 ![alt text](https://i.ibb.co/yV1dyLK/cron3x-github-banner.png)
 
 
-
-the GUI Lib is from CottonMC (https://github.com/CottonMC/LibGui) 
+Libraries: 
+  - the GUI Lib is from CottonMC (https://github.com/CottonMC/LibGui) 
