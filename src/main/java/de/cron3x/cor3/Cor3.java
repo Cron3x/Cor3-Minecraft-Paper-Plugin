@@ -33,7 +33,6 @@ public final class Cor3 extends JavaPlugin {
         regEvents();
         regCommands();
         regRecipes();
-        new TestKotlinClass();
     }
 
     @Override
@@ -62,6 +61,10 @@ public final class Cor3 extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new CreativeFlyRingRecipe(), this);
         getServer().getPluginManager().registerEvents(new CreativeFlyRingRecipe(), this);
         getServer().getPluginManager().registerEvents(new RingRecipe(), this);
+
+
+        //kotlin
+        getServer().getPluginManager().registerEvents(new TestKotlinClass(), this);
 
         log("registered");
     }
