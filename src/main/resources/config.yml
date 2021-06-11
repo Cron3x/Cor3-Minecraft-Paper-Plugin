@@ -1,0 +1,7 @@
+Groups:
+  member:
+    permissions:
+      - cor3.test
+  admin:
+    permissions:
+      - cor3.admin

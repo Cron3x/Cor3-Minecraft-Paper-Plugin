@@ -1,0 +1,16 @@
+name: Cor3
+version: ${project.version}
+main: de.cron3x.cor3.Cor3
+api-version: 1.16
+authors: [ Cron3x ]
+description: Plugin
+commands:
+  cor3-tools:
+    usage: '/cor3-tools'
+    permission: cor3.tools
+  leave:
+    usage: '/leave'
+  status:
+    usage: '/status'
+  rlc:
+    usage: '/rlc'
