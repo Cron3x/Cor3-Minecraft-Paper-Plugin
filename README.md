@@ -1,6 +1,6 @@
 # Cor3-Minecraft-Paper-Plugin
 
-<img src="https://cron3x.github.io/z_z/cor3.png" alt="drawing" width="1000"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="drawing" width="1000"/>
 
 
 Libraries: 
