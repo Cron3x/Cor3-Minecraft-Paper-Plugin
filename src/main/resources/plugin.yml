@@ -14,3 +14,5 @@ commands:
     usage: '/status'
   rlc:
     usage: '/rlc'
+  kttest:
+    usage: '/kttest'

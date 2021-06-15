@@ -5,7 +5,6 @@ import de.cron3x.cor3.commands.LeaveCommand;
 import de.cron3x.cor3.commands.StatusCommand;
 import de.cron3x.cor3.commands.subcommands.cor3tools.rlcCommand;
 import de.cron3x.cor3.events.*;
-import de.cron3x.cor3.kotlin.TestKotlinClass;
 import de.cron3x.cor3.recipes.RingRecipe;
 import de.cron3x.cor3.recipes.TeleportBlockRecipe;
 import de.cron3x.cor3.recipes.creative_fly.CreativeFlyWingRecipe;
@@ -14,6 +13,7 @@ import de.cron3x.cor3.recipes.creative_fly.CreativeFlyRingRecipe;
 import de.cron3x.cor3.recipes.elytras.DiamondElytra;
 import de.cron3x.cor3.recipes.elytras.GoldenElytra;
 import de.cron3x.cor3.recipes.elytras.IronElytra;
+import kootlin.KTTest;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -62,10 +62,6 @@ public final class Cor3 extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new CreativeFlyRingRecipe(), this);
         getServer().getPluginManager().registerEvents(new RingRecipe(), this);
 
-
-        //kotlin
-        getServer().getPluginManager().registerEvents(new TestKotlinClass(), this);
-
         log("registered");
     }
     private void regCommands(){
@@ -73,6 +69,9 @@ public final class Cor3 extends JavaPlugin {
         Objects.requireNonNull(getCommand("leave")).setExecutor(new LeaveCommand());
         Objects.requireNonNull(getCommand("status")).setExecutor(new StatusCommand());
         Objects.requireNonNull(getCommand("rlc")).setExecutor(new rlcCommand());
+
+        //kotlin
+        getCommand("kttest").setExecutor(new KTTest());
     }
     public void regRecipes(){
         Bukkit.addRecipe(new TeleportBlockRecipe().getRecipe());
