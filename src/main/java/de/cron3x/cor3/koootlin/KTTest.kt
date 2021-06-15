@@ -1,4 +1,4 @@
-package kootlin
+package de.cron3x.cor3.koootlin
 
 import org.bukkit.Bukkit
 import org.bukkit.command.Command

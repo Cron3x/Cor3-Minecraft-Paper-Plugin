@@ -13,7 +13,7 @@ import de.cron3x.cor3.recipes.creative_fly.CreativeFlyRingRecipe;
 import de.cron3x.cor3.recipes.elytras.DiamondElytra;
 import de.cron3x.cor3.recipes.elytras.GoldenElytra;
 import de.cron3x.cor3.recipes.elytras.IronElytra;
-import kootlin.KTTest;
+import de.cron3x.cor3.koootlin.KTTest;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
