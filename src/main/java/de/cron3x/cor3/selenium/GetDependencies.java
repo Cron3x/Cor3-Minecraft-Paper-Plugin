@@ -23,6 +23,9 @@ public class GetDependencies {
     }
 
     public void StartDownload(){
+        if (out.getParentFile().exists()){
+            return;
+        }
         new BukkitRunnable(){
             @Override
             public void run(){

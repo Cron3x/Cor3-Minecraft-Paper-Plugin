@@ -86,8 +86,7 @@ public final class Cor3 extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new CreativeFlyRingRecipe(), this);
         getServer().getPluginManager().registerEvents(new CreativeFlyRingRecipe(), this);
         getServer().getPluginManager().registerEvents(new RingRecipe(), this);
-
-        log("registered");
+        
     }
     private void regCommands(){
         Objects.requireNonNull(getCommand("cor3-tools")).setExecutor(new Cor3ToolsManager());
@@ -136,10 +135,13 @@ public final class Cor3 extends JavaPlugin {
         }
         if (System.getProperty("os.name").equalsIgnoreCase("windows 10")){
             link =  "https://chromedriver.storage.googleapis.com/"+Cor3.getInstance().GetConfigYML("SeleniumVersion")+"/chromedriver_win32.zip";
-        } else if (System.getProperty("os.name").equalsIgnoreCase("nix") || System.getProperty("os.name").equalsIgnoreCase("nux") ||System.getProperty("os.name").equalsIgnoreCase("aix")){
+        } else if (System.getProperty("os.name").equalsIgnoreCase("nix") || System.getProperty("os.name").equalsIgnoreCase("nux") ||System.getProperty("os.name").equalsIgnoreCase("aix") ||System.getProperty("os.name").equalsIgnoreCase("linux")){
             link =  "https://chromedriver.storage.googleapis.com/"+Cor3.getInstance().GetConfigYML("SeleniumVersion")+"/chromedriver_linux64.zip";
         }else if (System.getProperty("os.name").equalsIgnoreCase("mac")){
             link =  "https://chromedriver.storage.googleapis.com/"+Cor3.getInstance().GetConfigYML("SeleniumVersion")+"/chromedriver_mac4.zip";
+        }
+        else {
+            SetConfigYML("os", System.getProperty("os.name"));
         }
 
         out = new File("plugins//Cor3//selenium_dependencies//chromedriver//"+System.getProperty("os.name").toLowerCase().replace(" ", "_")+"//"+Cor3.getInstance().GetConfigYML("SeleniumVersion").replace(".","_")+"//chromedriver.zip");

@@ -46,16 +46,17 @@ public class WelcomeMessage implements Listener {
     }
     public static String getMessage(Player player) {
         StringBuilder file_content = new StringBuilder();
-        String file_path = "cor3-plugin/welcome_message.q3";
+        String file_path = "plugin/Cor3/welcome_message.q3";
         try {
             File file = new File(file_path);
             log(file_path);
             if (!file.exists()) {
                 file.getParentFile().mkdirs();
                 file.createNewFile();
-                String default_option = "NAME:{Cron3x} MESSAGE:{credit to %%PLAYER%%};\n" +
-                        "NAME:{Minecraft} MESSAGE:{%%PLAYER%% has joined the game. OMG the real one!};\n" +
-                        "@ALL MESSAGE:{#ff0000W#ff8000e#ffff00l#80ff00c#00ff00o#00ff80m#00ffffe#0080ffb#0000ffa#8000ffc#ff00ffk #9e9e9e%%PLAYER%%};";
+                String default_option =
+                        "NAME:{Cron3x} MESSAGE:{credit to %%PLAYER%%};\n" +
+                        "NAME:{Tastenrage} MESSAGE:{%%PLAYER%% stinkt};\n" +
+                        "@ALL MESSAGE:{Welcome back %%PLAYER%%!};";
                 FileWriter fw = new FileWriter(file);
                 fw.write(default_option);
                 fw.close();
