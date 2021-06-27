@@ -1,6 +1,7 @@
 package de.cron3x.cor3.events;
 
 import de.cron3x.cor3.Cor3;
+import de.cron3x.cor3.util.ColorConverter;
 import net.kyori.adventure.text.Component;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
@@ -31,19 +32,9 @@ public class WelcomeMessage implements Listener {
     @EventHandler
     public static void onPlayerJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
-        e.setJoinMessage(format(messageBuilder(player, getMessage(player))));//getOptions(Objects.requireNonNull(player.getName()))
+        e.setJoinMessage(ColorConverter.format(messageBuilder(player, getMessage(player))));//getOptions(Objects.requireNonNull(player.getName()))
     }
-    private static String format(String msg){
-        if (Bukkit.getVersion().contains("1.16")){
-            Matcher match = color_pattern.matcher(msg);
-            while (match.find()){
-                String color = msg.substring(match.start(), match.end());
-                msg = msg.replace(color, ChatColor.of(color)+"");
-                match = color_pattern.matcher(msg);
-            }
-        }
-        return ChatColor.translateAlternateColorCodes('&', msg);
-    }
+
     public static String getMessage(Player player) {
         StringBuilder file_content = new StringBuilder();
         String file_path = "plugin/Cor3/welcome_message.q3";

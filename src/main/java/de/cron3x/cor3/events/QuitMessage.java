@@ -1,6 +1,7 @@
 package de.cron3x.cor3.events;
 
 import de.cron3x.cor3.Cor3;
+import de.cron3x.cor3.util.ColorConverter;
 import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
@@ -29,19 +30,9 @@ public class QuitMessage implements Listener {
     @EventHandler
     public static void onPlayerJoin(PlayerQuitEvent e) {
         Player player = e.getPlayer();
-        e.setQuitMessage(format(messageBuilder(player, getMessage(player))));//getOptions(Objects.requireNonNull(player.getName()))
+        e.setQuitMessage(ColorConverter.format(messageBuilder(player, getMessage(player))));//getOptions(Objects.requireNonNull(player.getName()))
     }
-    private static String format(String msg){
-        if (Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17")){
-            Matcher match = color_pattern.matcher(msg);
-            while (match.find()){
-                String color = msg.substring(match.start(), match.end());
-                msg = msg.replace(color, ChatColor.of(color)+"");
-                match = color_pattern.matcher(msg);
-            }
-        }
-        return ChatColor.translateAlternateColorCodes('&', msg);
-    }
+
     public static String getMessage(Player player) {
         StringBuilder file_content = new StringBuilder();
         String file_path = "cor3-plugin/quit_message.q3";
