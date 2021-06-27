@@ -14,7 +14,6 @@ import de.cron3x.cor3.recipes.elytras.DiamondElytra;
 import de.cron3x.cor3.recipes.elytras.GoldenElytra;
 import de.cron3x.cor3.recipes.elytras.IronElytra;
 import de.cron3x.cor3.selenium.GetDependencies;
-import de.cron3x.cor3.selenium.LaunchChrome;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

@@ -32,7 +32,7 @@ public class QuitMessage implements Listener {
         e.setQuitMessage(format(messageBuilder(player, getMessage(player))));//getOptions(Objects.requireNonNull(player.getName()))
     }
     private static String format(String msg){
-        if (Bukkit.getVersion().contains("1.16")){
+        if (Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17")){
             Matcher match = color_pattern.matcher(msg);
             while (match.find()){
                 String color = msg.substring(match.start(), match.end());
