@@ -37,7 +37,7 @@ public class WelcomeMessage implements Listener {
 
     public static String getMessage(Player player) {
         StringBuilder file_content = new StringBuilder();
-        String file_path = "plugin/Cor3/welcome_message.q3";
+        String file_path = Cor3.FOLDER_PATH+"msg/welcome_message.q3";
         try {
             File file = new File(file_path);
             log(file_path);

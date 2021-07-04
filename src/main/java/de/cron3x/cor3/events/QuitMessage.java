@@ -32,10 +32,9 @@ public class QuitMessage implements Listener {
         Player player = e.getPlayer();
         e.setQuitMessage(ColorConverter.format(messageBuilder(player, getMessage(player))));//getOptions(Objects.requireNonNull(player.getName()))
     }
-
     public static String getMessage(Player player) {
         StringBuilder file_content = new StringBuilder();
-        String file_path = "cor3-plugin/quit_message.q3";
+        String file_path = Cor3.FOLDER_PATH+"msg/quit_message.q3";
         try {
             File file = new File(file_path);
             log(file_path);
@@ -55,16 +54,9 @@ public class QuitMessage implements Listener {
                 file_content.append(data);
             }
             scanner.close();
-
             String[] fc_list = file_content.toString().split(";");
             String final_msg = "";
-/*
-            for (int i = 0; i <= fc_list.length; i++){
-                log(""+i);
-                log(">------------------------<");
-                log(fc_list[i]);
-            }
-*/          log(""+player.getScoreboard().getTeams());
+            log(""+player.getScoreboard().getTeams());
             for(int i = 0; i < fc_list.length; ++i){
                 String fc_list_str = Arrays.toString(fc_list);
                 log(""+fc_list.length);

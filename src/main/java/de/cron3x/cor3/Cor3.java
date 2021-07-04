@@ -24,9 +24,10 @@ import java.util.Objects;
 
 public final class Cor3 extends JavaPlugin {
     private static Cor3 instance;
-    private File config = new File("plugins//Cor3//config.yml");
+    private File config = new File(FOLDER_PATH+"config.yml");
     private YamlConfiguration yamlConfiguration = YamlConfiguration.loadConfiguration(config);
 
+    public static String FOLDER_PATH = "plugins//Cor3//";
     public static String WEB_DRIVER_PATH = "";
     public static String BINARY_PATH = "";
     public static String PREFIX = "§7§lCor§6§l3§l §7@>§f§o ";
@@ -36,7 +37,6 @@ public final class Cor3 extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        Bukkit.getConsoleSender().sendMessage(PREFIX + GetConfigYML("Test"));
         Bukkit.getConsoleSender().sendMessage(PREFIX + System.getProperty("os.name"));
         SetConfigYML("os", System.getProperty("os.name"));
 
@@ -49,7 +49,7 @@ public final class Cor3 extends JavaPlugin {
 
     @Override
     public void onDisable() {
-
+        Bukkit.getConsoleSender().sendMessage(PREFIX + "Good bye");
     }
 
     public void log(String text){
@@ -124,7 +124,7 @@ public final class Cor3 extends JavaPlugin {
             link =  "https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots";
         }
 
-        File out = new File("plugins//Cor3//selenium_dependencies//chromebrowser//"+System.getProperty("os.name").toLowerCase().replace(" ", "_")+"//chrome.zip");
+        File out = new File(FOLDER_PATH+"selenium_dependencies//chromebrowser//"+System.getProperty("os.name").toLowerCase().replace(" ", "_")+"//chrome.zip");
 
         BINARY_PATH = out.getParentFile().toString();
         new GetDependencies(link, out);
@@ -141,7 +141,7 @@ public final class Cor3 extends JavaPlugin {
             link =  "https://chromedriver.storage.googleapis.com/"+Cor3.getInstance().GetConfigYML("SeleniumVersion")+"/chromedriver_mac4.zip";
         }
 
-        out = new File("plugins//Cor3//selenium_dependencies//chromedriver//"+System.getProperty("os.name").toLowerCase().replace(" ", "_")+"//"+Cor3.getInstance().GetConfigYML("SeleniumVersion").replace(".","_")+"//chromedriver.zip");
+        out = new File(FOLDER_PATH+"selenium_dependencies//chromedriver//"+System.getProperty("os.name").toLowerCase().replace(" ", "_")+"//"+Cor3.getInstance().GetConfigYML("SeleniumVersion").replace(".","_")+"//chromedriver.zip");
 
         WEB_DRIVER_PATH = out.getParentFile().toString();
 
