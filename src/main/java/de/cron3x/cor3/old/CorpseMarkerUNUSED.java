@@ -1,4 +1,4 @@
-package de.cron3x.cor3.events;
+package de.cron3x.cor3.old;
 
 import de.cron3x.cor3.Cor3;
 import net.md_5.bungee.api.ChatColor;
